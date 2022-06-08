@@ -1,7 +1,8 @@
 <?php
 require_once "./database/Manager.class.php";
 
-class Controller {
+class Controller
+{
 
     private $manager;
 
@@ -10,8 +11,9 @@ class Controller {
         $this->manager = new Manager;
     }
 
-    public function display($table) {
+    public function display($table)
+    {
         $data = $this->manager->selectTable($table);
-        require_once "./$table.view.php";
+        require_once "./templates/$table.view.php";
     }
 }
