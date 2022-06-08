@@ -12,28 +12,27 @@ define('WEBROOT', str_replace('index.php', '', $_SERVER['SCRIPT_NAME']));
 define('ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
 
 
-$path = ROOT.'core/model.php';
-require($path);
-$path = ROOT.'core/controller.php';
-require($path);
+$path = ROOT.'src/Controller.class.php';
+require_once($path);
+$path = ROOT.'database/Model.abstractclass.php';
+require_once($path);
 
 
 
 $param = explode('/', $_GET['p']);
-$controller = $param[0];
+$controller = "Controller";
+
+if(isset($param[0])){
+    $method = $param[0];
+}
 
 if(isset($param[1])){
-    $method = $param[1];
-}
-
-if(isset($param[2])){
-    $filtre = $param[2];
+    $filtre = $param[1];
 }
 
 
-$called = 'controllers/'.$controller.'.php';
-require($called);
-
+/*$called = 'src/'.$controller.'.php';
+require($called);*/
 
 if(method_exists($controller, $method)){
     $ctrl = new $controller;
@@ -47,4 +46,3 @@ if(method_exists($controller, $method)){
 }
 
 ?>
- 
