@@ -6,5 +6,4 @@ foreach($data as $key) {
 }
 
 $content = ob_get_clean();
-require_once "templates/template.view.php";
-?>
+require_once "templates/home.view.php";
