@@ -220,7 +220,10 @@ require "include/menubar.view.php";
             </div>
         </div>
     </section>
-
+    <div id="keywords">
+        <h4>Mots clés</h4>
+        <select name="keywords"> </select>
+    </div>
 </body>
 
 <?php
