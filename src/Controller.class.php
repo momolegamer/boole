@@ -21,6 +21,10 @@ class Controller
         require_once "./templates/marques.view.php";
     }
 
+    public function recherche() {
+        require_once "./templates/recherche.view.php";
+    }
+
     public function display($table = null)
     {
         if ($table) {
@@ -30,19 +34,22 @@ class Controller
         }
     }
 
-    public function template()
+    public function search($keyword=null)
     {
-        require_once "./templates/template.view.php";
-    }
-
-    public function search($keyword) {
-        $keyword = trim($keyword);
-        if (!empty($keyword)) {
-            $data = $this->manager->selectRankFromKeyword($keyword);
-            $productData = $this->manager->searchByTag($keyword);
-            require_once "./templates/search.view.php";
-        } else {
-
+        if ($keyword) {
+            $ranked = $this->manager->selectRankFromKeyword($keyword);
         }
+        require_once "./templates/search.view.php";
     }
+
+    // public function search($keyword) {
+    //     $keyword = trim($keyword);
+    //     if (!empty($keyword)) {
+    //         $data = $this->manager->selectRankFromKeyword($keyword);
+    //         $productData = $this->manager->searchByTag($keyword);
+    //         require_once "./templates/search.view.php";
+    //     } else {
+
+    //     }
+    // }
 }

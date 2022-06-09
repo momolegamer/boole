@@ -42,6 +42,8 @@ if(isset($method) && method_exists($controller, $method)){
     $ctrl = new $controller;
     if(isset($filtre)){
         $ctrl->$method($filtre);
+    } else if (isset($_POST["search"])) {
+        $ctrl->$method($_POST["search"]);
     } else {
         $ctrl->$method();
     }
