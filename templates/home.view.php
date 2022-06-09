@@ -36,7 +36,7 @@ require "include/menubar.view.php";
                                 <img src='assets/img/marques/auchan.png' class='img-responsive'>
                             </div>
                             <div class='col-xs-3'>
-                                <img src='assets/img/marques/marionaud.png' class='img-responsive'>
+                                <img src='assets/img/marques/marionnaud.png' class='img-responsive'>
                             </div>
                             <div class='col-xs-3'>
                                 <img src='assets/img/marques/franprix.png' class='img-responsive'>
