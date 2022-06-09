@@ -36,10 +36,10 @@ require "include/menubar.view.php";
                                 <img src='assets/img/marques/auchan.png' class='img-responsive'>
                             </div>
                             <div class='col-xs-3'>
-                                <img src='assets/img/marques/marionaud.jpg' class='img-responsive'>
+                                <img src='assets/img/marques/marionaud.png' class='img-responsive'>
                             </div>
                             <div class='col-xs-3'>
-                                <img src='assets/img/marques/fanprix.png' class='img-responsive'>
+                                <img src='assets/img/marques/franprix.png' class='img-responsive'>
                             </div>
                             <div class='col-xs-3'>
                                 <img src='assets/img/marques/casino.png' class='img-responsive'>
@@ -59,9 +59,9 @@ require "include/menubar.view.php";
                 <div class="row">
                     <div class="col-lg-12 text-center mb100">
                         <h2 class="section-heading">Top <span class="theme-accent-color">Produits</span></h2>
-                        <?php foreach($keywordData as $keyword) {
-                            echo "<a href='index.php?page=search/".$keyword->keyword."'>".$keyword->keyword."</a><br>";
-                        }?>
+                        <?php foreach ($keywordData as $keyword) {
+                            echo "<a href='index.php?page=search/" . $keyword->keyword . "'>" . $keyword->keyword . "</a><br>";
+                        } ?>
                         <hr class="thin-hr">
                     </div>
                 </div>

@@ -8,7 +8,7 @@
                 <span class='icon-bar'></span>
                 <span class='icon-bar'></span>
             </button>
-            <a class='navbar-brand smoothie' href='index.html'>BOOLE <span class='theme-accent-color'>APP</span></a>
+            <a class='navbar-brand smoothie' href='index.php?page=home'>BOOLE <span class='theme-accent-color'>APP</span></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
