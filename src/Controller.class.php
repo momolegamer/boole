@@ -16,6 +16,11 @@ class Controller
         require_once "./templates/home.view.php";
     }
 
+    public function marques() {
+        $websites = $this->manager->selectTable("website");
+        require_once "./templates/marques.view.php";
+    }
+
     public function display($table = null)
     {
         if ($table) {

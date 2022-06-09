@@ -45,7 +45,7 @@ require "include/menubar.view.php";
                                 <img src='assets/img/marques/casino.png' class='img-responsive'>
                             </div>
                         </div>
-                        <p class="mt30"><a href="#contact" class="btn btn-primary btn-red page-scroll">PLUS DE MARQUES</a></p>
+                        <p class="mt30"><a href="index.php?page=marques" class="btn btn-primary btn-red page-scroll">PLUS DE MARQUES</a></p>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@ require "include/menubar.view.php";
                     <div class="col-lg-12 text-center mb100">
                         <h2 class="section-heading">Top <span class="theme-accent-color">Produits</span></h2>
                         <?php foreach($keywordData as $keyword) {
-                            echo "<a href='index.php?page=search/".$keyword->keyword."'>".ucfirst($keyword->keyword)."</a><br>";
+                            echo "<a href='index.php?page=search/".$keyword->keyword."'>".$keyword->keyword."</a><br>";
                         }?>
                         <hr class="thin-hr">
                     </div>
