@@ -59,8 +59,10 @@ require "include/menubar.view.php";
                 <div class="row">
                     <div class="col-lg-12 text-center mb100">
                         <h2 class="section-heading">Top <span class="theme-accent-color">Produits</span></h2>
+                        <?php foreach($keywordData as $keyword) {
+                            echo "<a href='index.php?page=search/".$keyword->keyword."'>".ucfirst($keyword->keyword)."</a><br>";
+                        }?>
                         <hr class="thin-hr">
-                        <?= $content ?>
                     </div>
                 </div>
             </div>
