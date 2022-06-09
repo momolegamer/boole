@@ -34,9 +34,10 @@ class Controller
         }
     }
 
-    public function search($keyword=null)
+    public function search($keyword="")
     {
-        if ($keyword) {
+        $keyword = trim($keyword);
+        if (!empty($keyword)) {
             $ranked = $this->manager->selectRankFromKeyword($keyword);
         }
         require_once "./templates/search.view.php";

@@ -15,8 +15,8 @@
         <div class='collapse navbar-collapse' id='main-navigation'>
             <ul class='nav navbar-nav navbar-right'>
                 <li><a href='#about' class='page-scroll'>À propos de nous</a></li>
-                <li><a href='#about' class='page-scroll'>Marques</a></li>
-                <li><a href='index.php?page=search/tarte' class='page-scroll'>Recherche</a></li>
+                <li><a href='index.php?page=marques' class='page-scroll'>Marques</a></li>
+                <li><a href='index.php?page=search' class='page-scroll'>Recherche</a></li>
                 <li><a href='#about' class='page-scroll'>Contactez-nous</a></li>
             </ul>
         </div>
