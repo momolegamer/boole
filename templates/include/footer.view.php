@@ -38,3 +38,4 @@
         });
     });
 </script>
+<script src='assets/js/api.js'></script>
