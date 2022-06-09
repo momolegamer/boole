@@ -14,12 +14,13 @@ define('ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
 
 $path = ROOT.'src/Controller.class.php';
 require_once($path);
-$path = ROOT.'database/Model.abstractclass.php';
-require_once($path);
 
 
-
-$param = explode('/', $_GET['p']);
+if (!empty($_GET['page'])) {
+    $param = explode('/', $_GET['page']);
+} else {
+    header("Location: index.php?page=home");
+}
 $controller = "Controller";
 
 if(isset($param[0])){
@@ -30,11 +31,14 @@ if(isset($param[1])){
     $filtre = $param[1];
 }
 
-
 /*$called = 'src/'.$controller.'.php';
 require($called);*/
+//echo $_SERVER['SCRIPT_NAME'];
+//echo $_GET["page"];
+//echo $method;
+//exit;
 
-if(method_exists($controller, $method)){
+if(isset($method) && method_exists($controller, $method)){
     $ctrl = new $controller;
     if(isset($filtre)){
         $ctrl->$method($filtre);
@@ -42,7 +46,7 @@ if(method_exists($controller, $method)){
         $ctrl->$method();
     }
 } else {
-    echo "la methode n'existe pas";
+    header("Location: 404.php");
 }
 
 ?>
