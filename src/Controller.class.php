@@ -30,12 +30,19 @@ class Controller
         }
     }
 
+    public function template()
+    {
+        require_once "./templates/template.view.php";
+    }
+
     public function search($keyword) {
         $keyword = trim($keyword);
         if (!empty($keyword)) {
             $data = $this->manager->selectRankFromKeyword($keyword);
             $productData = $this->manager->searchByTag($keyword);
             require_once "./templates/search.view.php";
+        } else {
+
         }
     }
 }
